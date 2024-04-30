@@ -15,7 +15,7 @@ import io.swagger.v3.oas.annotations.parameters.RequestBody;
 public class GithubWebhookController {
     
     @PostMapping("/event")
-    public ResponseEntity<String> receiveEvent(@RequestBody Map<String, Object> payload){
+    public ResponseEntity<String> receiveEvent(@RequestBody String payload){
         System.out.println(payload);
         return ResponseEntity.status(HttpStatus.ACCEPTED).body("Accepted");
     }
